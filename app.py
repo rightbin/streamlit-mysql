@@ -37,14 +37,14 @@ def main():
                 # 3. 우리가 원하는거 실행 가능.
                 # cursor.execute('select database();')
 
-                query = """insert into cats4(name,age)
-                        values (%s,%s);"""
+                table = """insert into cats4(name,age)
+                        values ('냐옹이지금22',10);"""
                 
 
 
                 # record = [   ('냐옹이',1),('나비',3)     ,('단비',5)     ]
 
-                cursor.execute (query,('냐옹이',10))
+                cursor.execute (table)
 
                 # cursor.executemany(query,record)
                 connection.commit()
